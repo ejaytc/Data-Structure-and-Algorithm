@@ -1,12 +1,13 @@
 // bublesort.c
 #include <stdio.h>
+#include <inttypes.h>
 
 
 int main()
 {
-    unsigned i, j, temp, size, disp;
-    unsigned set[5] = {7, 2, 5, 3, 4};
-    size = sizeof(set) / sizeof(unsigned);
+    uint16_t i, j, temp, size, disp;
+    uint16_t set[5] = {7, 2, 5, 3, 4};
+    size = sizeof(set) / sizeof(uint16_t);
 
     for(j = 0; j < size; j++)
     {
@@ -23,7 +24,7 @@ int main()
     
     for(disp = 0; disp < size; disp++)
     {
-        printf("%d\t", set[disp]);
+        printf("%"PRId16"\t", set[disp]);
     }        
     getchar();
     return 0;
